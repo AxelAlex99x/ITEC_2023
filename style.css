@@ -1,0 +1,151 @@
+*{
+  margin: 0;
+  padding: 0%;
+}
+body{
+   background-image: url(backgr.jpg);
+   background-size: cover;
+}
+.checkbtn{
+  font-size:30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display:none;
+}
+h1.title{
+  font-size: 100px;
+  text-align: center;
+  margin-top: 20vh;
+  letter-spacing: 3px;
+  color: rgb(178,145,255);
+  font-size: 72px;
+  font-family:'Roboto', cursive;
+}
+.butc{
+  margin-top: 6.7em;
+display: flex;
+justify-content: center;
+}
+button {
+  text-align: center;
+  border: 3px double;
+  border-color: rgb(178,145,255);
+  padding: 1em 1.5em;
+  background: none;
+  color: rgb(178,145,255);
+  font-size: 2em;
+  transition: all 0.4s;
+  display: block;
+  border-radius: 20px;
+}
+button:hover{
+  border-color: rgb(178,145,255);
+  color: rgb(180, 180, 200);
+  box-shadow: 0 0.7em 0.7em -0.3em rgb(178,145,255);
+  transform: translateY(-0.3em);
+  cursor: pointer;
+}
+p{
+  color: white;
+  text-align: center;
+  margin-top: 5.5em;
+}
+.hide{
+display: none;
+}
+.putc{
+display: flex;
+justify-content: center;
+margin-top: 1.5em;
+align-items: stretch;
+}
+.submit{
+margin-left: 5px;
+padding: 0.1em;
+height: 1.8em;
+}
+.input{
+margin-top: 0.7em;
+margin-right: 5px;
+height: 2.4em;
+width: 30%;
+border-radius: 20px;
+}
+#idContainer{
+display: flex;
+justify-content: center;
+margin: 2.5em;
+}
+input{
+background: none;
+border: 3px double;
+border-color: rgb(178,145,255);
+margin-top: 20px; 
+width: 20%; 
+height: 20px;
+color:  rgb(178,145,255);
+/* text-align:center; */
+ padding-left: 0.5cm; 
+}
+textarea{
+background-color: rgb(183, 153, 255, 0.7);
+border-color: rgb(178,145,255);
+margin-top: 20px; 
+width: 50%; 
+height: 450px;
+color:blue;
+border-radius: 20px;
+text-align: center;
+font-size:larger;
+padding-top: 40px;
+font-family:'Roboto', cursive;
+}
+.output{
+display: flex;
+justify-content: center;
+margin-top: 4.5em;
+}
+.button{
+  margin-right: 0.4em;
+}
+.info{
+  margin-top: 0;
+  text-align: center;
+  font-family:'Roboto', cursive;
+  font-size:10px;
+  margin-top: 25px;
+  color: rgb(178,145,255);
+}
+.speech{
+  margin-top:1.5em;
+  display: flex;
+  justify-content: center;
+}
+
+@media(max-width:800px){
+.putc{
+  flex-direction: column;
+  align-items: center;
+}
+.submit{
+  width: 50%;
+  margin-left: 0;
+}
+.input{
+  margin-right:0;
+  width: 50%;
+}
+.butc{
+  flex-direction: column;
+  align-items: center;
+}
+.button{
+  margin-top: 1.5em;
+}
+}

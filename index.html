@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,300&family=Unbounded:wght@300&display=swap" rel="stylesheet">
+    <title>Poetry generator</title>
+</head>
+<body>
+<h1 class="title">Welcome!</h1>
+    <div class="butc">
+        <button class="button" value ="Yes" onclick="ShowHideDiv(this)">Press to generate a poem </button>
+        <button type="reset" class="button" value ="No" onclick="ShowHideDiv(this)">Hide</button>  
+    </div>
+    <div id="Ok" style="display:none">
+        <div class="info">
+            <h1>Please only write keywords. If you wish to add more words, please separate them using "," or "and".<br>
+            If you wish to generate a random poem without entering keywords, just click Submit! </h1>
+        </div>
+        <div class="putc">
+            <input class="input" type="text" placeholder="Type keywords" onfocus="this.value=''"/>
+            <button id ="submit" class="submit" value ="Yes" onclick="ShowHideDiv2(this)">Submit</button>
+        </div>
+        <div id="Ok2" style="display:none">
+            <div class="output" id="textToSynth">
+                <textarea id="txtOutput"></textarea>
+            </div>
+            <div class="speech">
+                <button id="btnArea">Convert to Speech</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const content = document.getElementById("txtOutput");
+        const btnArea = document.getElementById("btnArea");
+
+        btnArea.addEventListener("click", () => {
+        const utterance = new SpeechSynthesisUtterance(content.value);
+        window.speechSynthesis.speak(utterance);
+        });
+
+    </script> 
+    <script src="idk.js"></script>
+</body>
+</html>
